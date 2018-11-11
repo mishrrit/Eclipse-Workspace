@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Regression TestSuite]">
+  <listeners>
+    <listener class-name="com.vt.qa.utils.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" name="User Login Page(failed)">
+    <classes>
+      <class name="com.pHpTravel.test.UserLoginPage">
+        <methods>
+          <include name="veriyLoginPage"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.pHpTravel.test.UserLoginPage -->
+    </classes>
+  </test> <!-- User Login Page(failed) -->
+</suite> <!-- Failed suite [Regression TestSuite] -->

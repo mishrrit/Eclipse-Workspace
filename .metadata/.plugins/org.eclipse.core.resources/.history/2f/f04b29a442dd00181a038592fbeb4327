@@ -1,0 +1,29 @@
+package com.test;
+
+import org.testng.annotations.BeforeMethod;
+
+import com.Client.restClient;
+
+import restApi.baseClass;
+
+public class getAPITest extends baseClass{
+	
+	baseClass base;
+	
+	@BeforeMethod
+	public void setup() {
+		base =  new baseClass();
+		String url = prop.getProperty("URL");
+		String api = prop.getProperty("serviceUrl");
+		
+		String apiUrl = url + api;
+		
+		restClient rest =  new restClient();
+		rest.
+		
+		
+	}
+	
+	
+
+}

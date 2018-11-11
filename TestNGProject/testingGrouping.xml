@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Regression TestSuite">
+<test name="GroupsDemo">
+<groups>
+	<define name ="all">
+			<include name ="wild"></include>
+			<include name ="pet"></include>
+			<include name ="animals"></include>
+			<include name ="king"></include>
+	</define>
+	<define name ="Jungle">
+			<include name ="wild"></include>
+			<include name ="animals"></include>
+	</define>
+	<run>
+		<include name="king"></include>
+	</run>
+</groups>
+	<classes>
+		<class name="TestNg_Asserts.Test_Grouping"></class>
+	</classes>
+</test>
+</suite>

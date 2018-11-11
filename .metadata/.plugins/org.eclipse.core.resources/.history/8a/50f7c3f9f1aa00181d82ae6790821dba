@@ -1,0 +1,42 @@
+package com.pHpTravel.test;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.vt.pHpTravels.pages.HomePage;
+import com.vt.pHpTravels.pages.pHp_loGinPage;
+import com.vt.qa.base.TestBase;
+
+public class HomePageHotelsTab extends TestBase {
+	pHp_loGinPage demo;
+	HomePage home;
+	
+	public HomePageHotelsTab() {
+		super();
+	}
+	
+	@BeforeMethod
+	public void setup() {
+		initialization();
+		demo = new pHp_loGinPage();
+		home = demo.DemoPage();
+		
+	}
+	
+	@Test
+	public void verifyHotelSearch() {
+		home.HotelSearch("Bangalore");
+		home.HotelCheckinDate();
+		home.HotelCheckOutDate();
+		home.TravellersList(3, 3);
+		home.clickOnSearchButton();
+	
+	}
+	
+	@AfterMethod
+	public void tearDown() {
+		//driver.quit();
+	}
+
+}

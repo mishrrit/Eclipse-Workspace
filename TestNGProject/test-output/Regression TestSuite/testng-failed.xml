@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Regression TestSuite]">
+  <test thread-count="5" name="GroupsDemo(failed)">
+    <classes>
+      <class name="TestNg_Asserts.TestNg_Reporting">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterMethod"/>
+          <include name="testmethod3"/>
+          <include name="testmethod2"/>
+          <include name="afterClass"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- TestNg_Asserts.TestNg_Reporting -->
+    </classes>
+  </test> <!-- GroupsDemo(failed) -->
+</suite> <!-- Failed suite [Regression TestSuite] -->

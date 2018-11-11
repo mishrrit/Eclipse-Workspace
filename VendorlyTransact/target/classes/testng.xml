@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Regression TestSuite">
+
+	<!-- <listeners>
+		<listener class-name="com.vt.qa.utils.ExtentReporterNG" />
+	</listeners> -->
+	
+
+	<!-- <test name="User Login Page">
+	<packages>
+	<package name ="com.pHpTravel.test.*"/>
+	</packages>
+	
+	
+		
+	</test> -->
+	
+	<test name="Navigating to VT Login Page ">
+	
+		<classes>
+			<class name="vendorly.Test.vTloginPage"></class>
+		</classes>
+	</test>
+
+
+</suite>

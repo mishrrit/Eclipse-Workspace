@@ -1,0 +1,42 @@
+package KeyPress;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class KeyPress_Demo1 {
+	
+	WebDriver driver;
+	private String BaseURL;
+	@Before
+	public void setUp() throws Exception {
+	BaseURL ="https://letskodeit.teachable.com/p/practice";
+	System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") +"\\Chromedriver\\chromedriver.exe");
+	driver = new ChromeDriver();	
+	
+	driver.manage().window().maximize();
+	Thread.sleep(2000);
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		driver.quit();
+	}
+
+	@Test
+	public void test() throws InterruptedException {
+		driver.get(BaseURL);
+		Thread.sleep(2000);
+		String SelectAll = Keys.chord(Keys.CONTROL+"a");
+		driver.findElement(By.id("openwindow")).sendKeys(SelectAll);
+		System.out.println(" all the elements are selected");		
+		
+	}
+
+}

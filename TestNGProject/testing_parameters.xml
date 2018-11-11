@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="parametrized testing">
+	<test name="Parameter1">
+		<parameter name="browser" value="firefox"></parameter>
+		<parameter name="vehicle" value="BMW"></parameter>
+		<parameter name="animals" value="tiger"></parameter>
+		<parameter name="age" value="27"></parameter>
+		<classes>
+			<class name="TestNg_Asserts.Test_Parameter"></class>
+		</classes>
+	</test>
+
+</suite>

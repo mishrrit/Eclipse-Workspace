@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="parametrized testing" parallel="tests" thread-count="2">
+	<test name="Firefox">
+		<parameter name="browser" value="firefox"></parameter>
+		<parameter name="username" value="alti.ritesh@gmail.com"></parameter>
+		<parameter name="password" value="Sippi@143"></parameter>
+		
+		<classes>
+			<class name="TestNg_Asserts.PractiseTest"></class>
+		</classes>
+	</test>
+	<test name="IE">
+		<parameter name="browser" value="ie"></parameter>
+		<parameter name="username" value="alti.ritesh@gmail.com"></parameter>
+		<parameter name="password" value="Sippi"></parameter>
+		
+		<classes>
+			<class name="TestNg_Asserts.PractiseTest"></class>
+		</classes>
+	</test>
+
+</suite>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;FirefoxDriver&apos; to &apos;Automation_Training&apos;&#x0D;&#x0A;- Original project: &apos;TestNGProject&apos;&#x0D;&#x0A;- Destination element: &apos;Automation_Training&apos;&#x0D;&#x0A;- Original element: &apos;FirefoxDriver&apos;" description="Copy folder" destination="=Automation_Training" element1="FirefoxDriver" files="0" flags="589830" folders="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1533062957727" units="0" version="1.0"/>
+</session>

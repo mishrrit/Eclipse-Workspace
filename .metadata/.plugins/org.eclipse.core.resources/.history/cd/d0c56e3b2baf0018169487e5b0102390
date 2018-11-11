@@ -1,0 +1,89 @@
+package com.pHpTravel.test;
+
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+import com.vt.pHpTravels.pages.HomePage;
+import com.vt.pHpTravels.pages.pHp_loGinPage;
+import com.vt.qa.base.TestBase;
+
+
+
+public class HomePageHotelsTab extends TestBase {
+	pHp_loGinPage demo;
+	HomePage home;
+	ExtentReports report;
+	ExtentTest test;
+	
+	public HomePageHotelsTab() {
+		super();
+	}
+	
+	@BeforeClass
+	public void beforeClass() {
+		report = com.vt.qa.utils.ExtentFactory.getInstance();
+		test = report.startTest(" TestER1 --->Verification ");
+	}
+	
+	@BeforeMethod
+	public void setup() {
+		initialization();
+		demo = new pHp_loGinPage();
+		home = demo.DemoPage();
+		
+	}
+	
+	@Test(priority=1)
+	public void verifyHotelSearch() throws InterruptedException {
+		
+		test.log(LogStatus.INFO, "HomePageHotelsTab is Initiated ");
+		WebDriverWait wait =new WebDriverWait(driver,10);
+		System.out.println("Calling the HotelSearch");
+		boolean CitySearch = home.HotelSearch("Bangalore");
+		
+		wait.withMessage("Awaiting HotelSearch to be displayed");
+		Assert.assertTrue(CitySearch,"In correct input");
+	
+		System.out.println("Calling the HotelCheckin");
+		home.HotelCheckinDate();
+		
+		wait.withMessage("Awaiting Checkin Date to be displayed");
+	
+		test.log(LogStatus.INFO, "HomePageHotels  is Running");
+		System.out.println("Calling the HotelCheckout");
+		home.HotelCheckOutDate();
+		
+		wait.withMessage("Awaiting CheckOut Date  to be displayed");
+		
+	    System.out.println("Calling the Travellers List");
+		home.TravellersList(3, 3);
+		
+		wait.withMessage("Awaiting Tarvellers List to be displayed");
+		
+		System.out.println("Calling the Search Button");
+		home.clickOnSearchButton();
+		
+		wait.withMessage("Search button is clicked");
+		}
+	
+	@AfterMethod
+	public void tearDown() {
+		driver.quit();
+	}
+	
+	@AfterClass
+	public void afterClass() {
+		
+		report.endTest(test);
+		report.flush();
+	}
+
+}

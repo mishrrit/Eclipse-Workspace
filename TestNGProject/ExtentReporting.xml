@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Extent Reporting">
+	<test name="Reporting">
+		<classes>
+			<class name="Reporting.TestER1"></class>
+			<class name="Reporting.TestER2"></class>
+		</classes>
+	</test>
+</suite>

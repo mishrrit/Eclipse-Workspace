@@ -1,0 +1,49 @@
+package utiLity;
+
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+
+import vendorly.Main.baseClass;
+import vtPages.FP_ProductSelection;
+
+public class FpProductSelection extends baseClass {
+	FP_ProductSelection prod;
+
+	public FpProductSelection() {
+		PageFactory.initElements(driver, this);
+		//init();
+		prod = new FP_ProductSelection();
+	}
+
+	public void CreateOffer() throws InterruptedException {
+		Thread.sleep(10000);
+		prod.CreateOffer.click();
+		Select select = new Select(prod.CreateOffer);
+		select.selectByVisibleText("Create Offer");
+		Thread.sleep(10000);
+
+	}
+
+	public void ClientSelection(String Client) throws InterruptedException {
+		Select client = new Select(prod.SelectClient);
+		client.selectByVisibleText(Client);
+		Thread.sleep(10000);
+	}
+
+	public void CategorySelection(String Category) throws InterruptedException {
+		Select category = new Select(prod.SelectClient);
+		category.selectByVisibleText(Category);
+		Thread.sleep(10000);
+	}
+
+	public void ProductSelection(String Product) throws InterruptedException {
+		Select product = new Select(prod.SelectClient);
+		product.selectByVisibleText(Product);
+		Thread.sleep(10000);
+	}
+	
+	public void ClickonCreateOfferButton() {
+		prod.CreateButton.click();
+	}
+
+}

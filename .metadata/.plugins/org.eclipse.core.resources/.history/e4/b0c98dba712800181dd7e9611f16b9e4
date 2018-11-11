@@ -1,0 +1,22 @@
+package Reporting;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import com.relevantcodes.extentreports.ExtentReports;
+
+public class ExtentFactory {
+	
+	public static ExtentReports getInstance() {
+		ExtentReports extent;
+		String timestamp = new SimpleDateFormat("yyyyMMddHHmm").format(new Date());
+		String Logfile = "logfile"+timestamp+".hmtl";
+		String directory = "C:\\Users\\mishrrit\\eclipse-workspace\\TestNGProject\\ExtentReport\\"+Logfile;
+		extent = new ExtentReports(directory, false);
+		extent.addSystemInfo("Selenium Version","3.14");
+		extent.addSystemInfo("OS Version", "Win");
+		return extent;
+						
+	}
+
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Regression TestSuite" duration-ms="31080" started-at="2018-09-19T17:52:34Z" finished-at="2018-09-19T17:53:05Z">
+    <groups>
+    </groups>
+    <test name="Navigating to www.phptravels.net Page " duration-ms="31080" started-at="2018-09-19T17:52:34Z" finished-at="2018-09-19T17:53:05Z">
+      <class name="com.pHpTravel.test.HomePageFrontEnd">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.pHpTravel.test.HomePageFrontEnd@544fe44c]" name="setup" is-config="true" duration-ms="9601" started-at="2018-09-19T17:52:34Z" finished-at="2018-09-19T17:52:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="PageTitle()[pri:1, instance:com.pHpTravel.test.HomePageFrontEnd@544fe44c]" name="PageTitle" duration-ms="5581" started-at="2018-09-19T17:52:44Z" finished-at="2018-09-19T17:52:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PageTitle -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.pHpTravel.test.HomePageFrontEnd@544fe44c]" name="teardown" is-config="true" duration-ms="810" started-at="2018-09-19T17:52:49Z" finished-at="2018-09-19T17:52:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.pHpTravel.test.HomePageFrontEnd@544fe44c]" name="setup" is-config="true" duration-ms="8100" started-at="2018-09-19T17:52:50Z" finished-at="2018-09-19T17:52:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="verifyPhpTravelsLogo()[pri:2, instance:com.pHpTravel.test.HomePageFrontEnd@544fe44c]" name="verifyPhpTravelsLogo" duration-ms="6172" started-at="2018-09-19T17:52:58Z" finished-at="2018-09-19T17:53:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPhpTravelsLogo -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.pHpTravel.test.HomePageFrontEnd@544fe44c]" name="teardown" is-config="true" duration-ms="773" started-at="2018-09-19T17:53:05Z" finished-at="2018-09-19T17:53:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="SendEmail()[pri:0, instance:com.pHpTravel.test.HomePageFrontEnd@544fe44c]" name="SendEmail" is-config="true" duration-ms="19499" started-at="2018-09-19T17:53:05Z" finished-at="2018-09-19T17:53:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SendEmail -->
+      </class> <!-- com.pHpTravel.test.HomePageFrontEnd -->
+    </test> <!-- Navigating to www.phptravels.net Page  -->
+  </suite> <!-- Regression TestSuite -->
+</testng-results>

@@ -1,0 +1,67 @@
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
+
+public class characterCount {
+
+	public static void main(String[] args) {
+
+		System.out.println(" Enter the Input String \n");
+		@SuppressWarnings("resource")
+		Scanner in = new Scanner(System.in);
+		String str = in.nextLine();
+
+		CountChar(str.toLowerCase());
+		
+		CountCharusingMap(str.toLowerCase());
+	}
+
+	private static void CountCharusingMap(String str) {
+		
+		Map<Integer,Character> map = new HashMap<Integer,Character>();
+		char[] str1 =str.toCharArray();
+		for(int i=0;i<str1.length;i++) {
+			if(i+1>str1.length) {
+				break;
+			}
+			if(str1[i]==str1[i+1])
+			map.put(i, str1[i]);
+			
+			//System.out.println(map.get(i)+map.getOrDefault(i, str1[i]));
+		}
+		
+		
+	}
+
+	private static void CountChar(String str) {
+
+		char[] name = str.toCharArray();
+
+		for (int i = 0; i < str.length(); i++) {
+
+			int count = 1;
+
+			char contains = name[i];
+			if (i + 1 > str.length()) {
+				break;
+			} else {
+
+				for (int j = i + 1; j < str.length(); j++) {
+					if (contains == name[j] && name[j] != '0') {
+						count++;
+						name[j] = '0';
+					}
+				}
+
+			}
+
+			if (name[i] != '0') {
+				System.out.println("Count of " + name[i] + " is " + count);
+			} else {
+				continue;
+			}
+		}
+
+	}
+}

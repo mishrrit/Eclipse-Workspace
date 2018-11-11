@@ -1,0 +1,83 @@
+package Action;
+
+import static org.junit.Assert.*;
+
+import java.util.concurrent.TimeUnit;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+
+public class DragAndDrop {
+	private String BaseURL;
+	private static WebDriver driver;
+	
+	@Before
+	public void setUp() throws Exception {
+	BaseURL ="http://jqueryui.com/droppable/";
+	System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") +"\\Chromedriver\\chromedriver.exe");
+	driver =new ChromeDriver();
+	
+	// Maximize the browser's window
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		driver.quit();
+	}
+
+	@Test
+	public void DragAndDrop() throws InterruptedException {
+		BaseURL ="http://jqueryui.com/droppable/";
+		driver.get(BaseURL);
+		driver.switchTo().frame(0);
+		WebElement Source = driver.findElement(By.id("draggable"));
+		WebElement Destination = driver.findElement(By.id("droppable"));
+		
+		Actions action = new Actions(driver);
+		action.dragAndDrop(Source,Destination).build().perform();
+		Thread.sleep(5000);
+		System.out.println(" element has been movedd from source to destination");
+		
+	}
+	
+	@Test
+	public void Dragg() throws InterruptedException {
+		BaseURL ="http://jqueryui.com/draggable/";
+		driver.get(BaseURL);
+		driver.switchTo().frame(0);
+		WebElement Source = driver.findElement(By.id("draggable"));
+				
+		Actions action = new Actions(driver);
+		action.dragAndDropBy(Source, 250,10);
+		Thread.sleep(5000);
+		System.out.println(" element has been movedd from source ");
+		
+	}
+	
+	@Test
+	public void Resize() throws InterruptedException {
+		BaseURL ="http://jqueryui.com/resizable/";
+		driver.get(BaseURL);
+		driver.switchTo().frame(0);
+		WebElement Source = driver.findElement(By.id("resizable"));
+			
+		Actions action = new Actions(driver);
+		action.dragAndDropBy(Source, 100, 100);
+		Thread.sleep(5000);
+		System.out.println(" element has been movedd from source ");
+		
+	}
+	
+
+}

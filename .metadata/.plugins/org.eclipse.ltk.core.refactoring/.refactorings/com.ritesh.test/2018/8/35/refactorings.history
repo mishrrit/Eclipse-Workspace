@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.vt.pHpTravels.pages.MyAccounts&apos; to &apos;MyAccountsPage&apos;&#x0D;&#x0A;- Original project: &apos;com.ritesh.test&apos;&#x0D;&#x0A;- Original element: &apos;com.vt.pHpTravels.pages.MyAccounts&apos;&#x0D;&#x0A;- Renamed element: &apos;com.vt.pHpTravels.pages.MyAccountsPage&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;MyAccounts&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.vt.pHpTravels.pages{MyAccounts.java[MyAccounts" matchStrategy="1" name="MyAccountsPage" qualified="false" references="true" similarDeclarations="false" stamp="1535686312030" textual="false" version="1.0"/>
+</session>

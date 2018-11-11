@@ -1,0 +1,31 @@
+
+public class StringPatternCount {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str ="aabbbccddaabbdddddd";
+		
+		PatternCheck(str);
+	}
+
+	private static void PatternCheck(String str) {
+		// TODO Auto-generated method stub
+		
+		
+		char [] strarray = str.toCharArray();
+		int count =1;
+		
+		for(int i=0;i<strarray.length;) {
+			for(int j=i+1;j<strarray.length;j++) {
+				 if(strarray[i]==strarray[j]) {
+					 count++;
+					 i=j;
+				 }else {
+					 break;
+				 }
+				System.out.println(strarray[i]+" is "+count);
+			}
+		}
+	}
+
+}

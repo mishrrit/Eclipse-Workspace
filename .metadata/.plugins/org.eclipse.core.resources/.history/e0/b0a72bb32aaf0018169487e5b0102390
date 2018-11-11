@@ -1,0 +1,67 @@
+package com.pHpTravel.test;
+
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.vt.pHpTravels.pages.HomePage;
+import com.vt.pHpTravels.pages.pHp_loGinPage;
+import com.vt.qa.base.TestBase;
+
+public class HomePageHotelsTab extends TestBase {
+	pHp_loGinPage demo;
+	HomePage home;
+	
+	
+	public HomePageHotelsTab() {
+		super();
+	}
+	
+	@BeforeMethod
+	public void setup() {
+		initialization();
+		demo = new pHp_loGinPage();
+		home = demo.DemoPage();
+		
+	}
+	
+	@Test(priority=1)
+	public void verifyHotelSearch() throws InterruptedException {
+		
+		//System.out.println("*************** Test Case Execution Begins *******************");
+		WebDriverWait wait =new WebDriverWait(driver,10);
+		System.out.println("Calling the HotelSearch");
+		boolean CitySearch = home.HotelSearch("Bangalore");
+		
+		wait.withMessage("Awaiting HotelSearch to be displayed");
+		Assert.assertTrue(CitySearch,"In correct input");
+	
+		System.out.println("Calling the HotelCheckin");
+		home.HotelCheckinDate();
+		
+		wait.withMessage("Awaiting Checkin Date to be displayed");
+	
+		System.out.println("Calling the HotelCheckout");
+		home.HotelCheckOutDate();
+		
+		wait.withMessage("Awaiting CheckOut Date  to be displayed");
+		
+	    System.out.println("Calling the Travellers List");
+		home.TravellersList(3, 3);
+		
+		wait.withMessage("Awaiting Tarvellers List to be displayed");
+		
+		System.out.println("Calling the Search Button");
+		home.clickOnSearchButton();
+		
+		wait.withMessage("Search button is clicked");
+		}
+	
+	@AfterMethod
+	public void tearDown() {
+		driver.quit();
+	}
+
+}

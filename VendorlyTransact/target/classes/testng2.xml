@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Regression TestSuite">
+
+	<listeners>
+		<listener class-name="com.vt.qa.utils.ExtentReporterNG" />
+	</listeners>
+	
+<!-- 	<test name="Navigating to www.phptravels.net Page ">
+		<classes>
+			<class name="com.pHpTravel.test.HomePageFrontEndTest"></class>
+		</classes>
+	</test> -->
+	<!-- <test
+		name="Search for City with Check/Checout Date and Travellers list">
+		<classes>
+			<class name="com.pHpTravel.test.HomePageHotelsTab"></class>
+		</classes>
+	</test> -->
+	<test name="User Login Page">
+		<classes>
+			<class name="com.pHpTravel.test.UserLoginPageTest"></class>
+		</classes>
+	</test>
+
+
+</suite>

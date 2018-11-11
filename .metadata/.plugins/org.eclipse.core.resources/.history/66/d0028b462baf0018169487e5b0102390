@@ -1,0 +1,69 @@
+package com.pHpTravel.test;
+
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+import com.vt.pHpTravels.pages.HomePage;
+import com.vt.pHpTravels.pages.pHp_loGinPage;
+import com.vt.qa.base.TestBase;
+
+public class HomePageFrontEnd extends TestBase {
+	pHp_loGinPage demo;
+	HomePage home;
+	ExtentReports report;
+	ExtentTest test;
+	
+	public HomePageFrontEnd() {
+		super();
+	}
+	
+	@BeforeClass
+	public void beforeClass() {
+		report = com.vt.qa.utils.ExtentFactory.getInstance();
+		test = report.startTest(" HomePageFrontEnd --->Verification ");
+	}
+	
+	@BeforeMethod
+	public void setup() {
+		initialization();
+		demo = new pHp_loGinPage();
+		home = demo.DemoPage();
+		
+	}
+	
+	@Test(priority =1)
+	public void PageTitle() {
+		
+		test.log(LogStatus.INFO, "HomePageFrontEnd is Initiated ");
+		String PageTitle =home.LoginPageTittle();
+		test.log(LogStatus.INFO, "UserLoginPage is Running ");
+		Assert.assertEquals(PageTitle, "PHPTRAVELS | Travel Technology Partner","Incorrect Page Title" );
+	}
+	
+	
+	@Test(priority =2)
+	public void verifyPhpTravelsLogo() {
+		test.log(LogStatus.INFO, "HomePageFrontEnd is Initiated ");
+		Assert.assertTrue(home.verifyPhpLogo(),"PHPTravels Logo is not displayed");
+	}
+	
+	
+	@AfterMethod
+	public void teardown() {
+		driver.quit();
+	}
+	
+	@AfterClass
+	public void afterClass() {
+		
+		report.endTest(test);
+		report.flush();
+	}
+}

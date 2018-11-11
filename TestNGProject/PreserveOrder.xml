@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="PreserveTest Suite">
+	<test name="test one " preserve-order="false">
+		<classes>
+			<class name="TestNg_Asserts.Test_Grouping"></class>
+			<class name="TestNg_Asserts.Test_Priority"></class>
+		</classes>
+	</test>
+</suite>

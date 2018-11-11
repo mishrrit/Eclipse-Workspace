@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Extent Reporting]">
+  <test thread-count="5" name="Reporting(failed)">
+    <classes>
+      <class name="Reporting.TestER2">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+          <include name="testmethod2"/>
+        </methods>
+      </class> <!-- Reporting.TestER2 -->
+    </classes>
+  </test> <!-- Reporting(failed) -->
+</suite> <!-- Failed suite [Extent Reporting] -->

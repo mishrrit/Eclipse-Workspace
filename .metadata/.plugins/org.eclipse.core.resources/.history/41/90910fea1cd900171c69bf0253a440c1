@@ -1,0 +1,92 @@
+package Samples;
+
+import static org.junit.Assert.*;
+
+import java.util.List;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Demo1 {
+	private WebDriver driver;
+	private String BaseUrl;
+	/*@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+	}
+
+	@AfterClass
+	public static void tearDownAfterClass() throws Exception {
+	}
+*/
+	@Before
+	public void setUp() throws Exception {
+		BaseUrl = "http://phptravels.com/demo/";
+		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") +"\\Chromedriver\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		//driver.
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		//driver.close();
+	}
+
+	@Test
+	public void test() {
+		driver.get(BaseUrl);
+		
+		List<WebElement> links = driver.findElements(By.xpath("//a[@class='btn btn-primary btn-lg btn-block']"));
+		
+		for(WebElement sites:links){
+			String SiteName = sites.getText();
+			//System.out.println(SiteName);
+			if(SiteName.equals("http://www.phptravels.net")){
+				sites.click();
+				System.out.println(" User clicked on the link ");
+				break;
+				
+			}
+			
+		}
+		
+	
+		boolean tab = driver.findElement(By.linkText("TOURS")).isEnabled();
+		if(tab==true) {
+			System.out.println("true");
+		}
+		WebElement element = (new WebDriverWait(driver, 30)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='#TOURS']")));
+		driver.findElement(By.xpath("//a[@href='#TOURS']")).click();	
+		System.out.println("Flights tab is clicked");
+		//driver.findElement(By.xpath("//a[@href='#TRAVELPAYOUTS']")).click();
+		System.out.println(" Travel Page is opened");
+		driver.findElement(By.linkText("Search by Hotel or City Name")).click();
+		driver.findElement(By.xpath("//a[@href='#flight']")).click();
+			
+		
+		System.out.println("Flights tab is clicked");
+		/*List<WebElement> StartDates = driver.findElements(By.className("mewtwo-datepicker-current-date mewtwo-datepicker-current mewtwo-datepicker-range"));
+		for(WebElement dates:StartDates){
+			if(dates.getText().equals("5")){
+				//dates.click();
+			System.out.println(" 5th is selected");	
+			}else {
+				System.out.println(" 5th is not yet selected");
+			}
+			
+		}*/
+		
+		driver.close();
+		
+	}
+
+}

@@ -1,0 +1,51 @@
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+public class characterCount {
+
+	public static void main(String[] args) {
+
+		String str = "riteshkrmishra";
+
+		/*int len = str.length();
+		char[] chararray = new char[len];
+		chararray = str.toCharArray();*/
+		
+		CountChar(str);
+	}
+
+	private static void CountChar(String str) {
+		
+		char[] name = str.toCharArray();
+		char maxchar = name[0];
+		for (int i = 0; i < str.length(); i++) {
+				
+				int count = 1;
+				char arr[] = new char[str.length()];
+				arr[i]= name[i];
+				
+				char contains = name[i];
+				if (i + 1 > str.length()) {
+					break;
+			} else {
+
+				for (int j = i + 1; j < str.length(); j++) {
+					if (contains == name[j]&&name[j]!='0') {
+						count++;
+						name[j]='0';
+					}
+				}
+
+			}
+				
+			if(name[i]!='0') {	
+			System.out.println("Count of "+name[i]+ " is "+count);
+			}else {
+				continue;
+			}
+		}
+
+		
+	}
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [parametrized testing]" parallel="tests">
+  <test thread-count="2" name="Firefox(failed)" parallel="tests">
+    <parameter name="password" value="Sippi@143"/>
+    <parameter name="browser" value="firefox"/>
+    <parameter name="username" value="alti.ritesh@gmail.com"/>
+    <classes>
+      <class name="TestNg_Asserts.PractiseTest">
+        <methods>
+          <include name="afterClass"/>
+          <include name="Login"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestNg_Asserts.PractiseTest -->
+    </classes>
+  </test> <!-- Firefox(failed) -->
+  <test thread-count="2" name="IE(failed)" parallel="tests">
+    <parameter name="password" value="Sippi"/>
+    <parameter name="browser" value="ie"/>
+    <parameter name="username" value="alti.ritesh@gmail.com"/>
+    <classes>
+      <class name="TestNg_Asserts.PractiseTest">
+        <methods>
+          <include name="afterClass"/>
+          <include name="Login"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestNg_Asserts.PractiseTest -->
+    </classes>
+  </test> <!-- IE(failed) -->
+</suite> <!-- Failed suite [parametrized testing] -->

@@ -1,0 +1,40 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class StringPatternCount {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str ="aabbbccddaabbdddddd";
+		
+		PatternCheck(str);
+	}
+
+	private static void PatternCheck(String str) {
+		// TODO Auto-generated method stub
+		
+		Map<Character,Integer> map = new HashMap<Character,Integer>();
+		char [] strarray = str.toCharArray();
+		int count =1;
+		int j=0;
+		for(int i=0;i<strarray.length;i=j) {
+			System.out.println(i+"inside first"+strarray[i]);
+			for( j=i+1;j<strarray.length;j++) {
+				System.out.println("inside second"+count);
+				 if(strarray[i]==strarray[j]) {
+					 count++;
+					 map.put(strarray[i], j);
+					 i=j;
+				 }else {
+					 i=j;
+					 count =1;
+					 break;
+				 }				
+			}
+			//System.out.println(strarray[i]+" is "+count);
+		}
+		
+		System.out.println(map);
+	}
+
+}
