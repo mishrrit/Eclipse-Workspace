@@ -1,0 +1,76 @@
+import java.util.Scanner;
+
+public class RemovecharfromString {
+
+	@SuppressWarnings("resource")
+	public static void main(String[] args) {
+
+		System.out.println("Enter the given string \n");
+		Scanner in = new Scanner(System.in);
+		String str = in.nextLine();
+		
+		System.out.println(" Enter the Character to be removed \n");
+		Scanner inc = new Scanner(System.in);
+		//String inch = inc.nextLine();
+		
+		//String str = "AEROPLANE";
+		char ch = inc.next().charAt(0);
+
+		/*// Using replace function
+		String strnew = str.replace(, "");
+
+		System.out.println("Using Replace function \n"+strnew);*/
+
+		// Using code logic
+		RemoveCharFirstOcurrence(str, ch);
+		RemoveCharMultipleOcurrence(str,ch);
+		RemoveCharLastOcurrence(str,ch);
+	}
+
+	private static void RemoveCharLastOcurrence(String str, char ch) {
+		char charArray[] = str.toCharArray();
+		for (int i = 0; i < charArray.length; i++) {
+			if (charArray[i] == ch) {
+				while (i < charArray.length - 1) {
+					charArray[i] = charArray[i + 1];
+					i++;
+				}
+			}
+		}
+		
+		System.out.println("Remove the character from last \n");
+		str = str.substring(0, charArray.length -1);
+		
+		System.out.println(str);
+		
+	}
+
+	private static void RemoveCharMultipleOcurrence(String str, char ch) {
+		char charArray[] = str.toCharArray();
+		
+		
+	}
+
+	private static void RemoveCharFirstOcurrence(String str, char ch) {
+
+		char charArray[] = str.toCharArray();
+		for (int i = 0; i < charArray.length; i++) {
+			if (charArray[i] == ch) {
+				while (i < charArray.length - 1) {
+					charArray[i] = charArray[i + 1];
+					i++;
+				}
+			}
+		}
+		
+		System.out.println("Removing the character from beginning \n");
+		
+		for (int i = 0; i < charArray.length - 1; i++) 
+			System.out.print(charArray[i]);
+		
+
+	}
+	
+	
+
+}
