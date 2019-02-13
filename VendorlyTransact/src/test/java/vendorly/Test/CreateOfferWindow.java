@@ -1,5 +1,7 @@
 package vendorly.Test;
 
+import org.testng.annotations.BeforeMethod;
+
 import vendorly.Main.baseClass;
 
 public class CreateOfferWindow extends baseClass{
@@ -9,5 +11,8 @@ public class CreateOfferWindow extends baseClass{
 		super();
 	}
 	
-	//@BeforeMethod
+	@BeforeMethod
+	public void SetUp() {
+		
+	}
 }

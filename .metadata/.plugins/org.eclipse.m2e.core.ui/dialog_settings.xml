@@ -78,6 +78,8 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="seleniumGridTest.sleniumGridTest"/>
+			<item value="restApiUsing.RestAssured"/>
 			<item value="VendorlyTransact.VendorlyTransact"/>
 			<item value="testDemoMaven.testDemoMaven"/>
 			<item value="com.ritesh.MavenProjectAutomation.com.ritesh.test"/>
@@ -89,6 +91,8 @@
 			<item value="maven.MavenProjects"/>
 		</list>
 		<list key="groupId">
+			<item value="seleniumGridTest"/>
+			<item value="restApiUsing"/>
 			<item value="VendorlyTransact"/>
 			<item value="testDemoMaven"/>
 			<item value="com.ritesh.MavenProjectAutomation"/>
@@ -98,6 +102,8 @@
 			<item value="maven"/>
 		</list>
 		<list key="artifactId">
+			<item value="sleniumGridTest"/>
+			<item value="RestAssured"/>
 			<item value="VendorlyTransact"/>
 			<item value="testDemoMaven"/>
 			<item value="com.ritesh.test"/>

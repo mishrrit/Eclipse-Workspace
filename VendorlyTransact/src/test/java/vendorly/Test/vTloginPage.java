@@ -49,11 +49,12 @@ public class vTloginPage extends baseClass {
 		prod.ClientSelection(Client);
 		prod.CategorySelection(Category);
 		prod.ProductSelection(Product);
+		prod.ClickonCreateOfferButton();
 	}
 
 	@AfterMethod
 	public void TearDown() {
-		driver.quit();
+		//driver.quit();
 	}
 
 }

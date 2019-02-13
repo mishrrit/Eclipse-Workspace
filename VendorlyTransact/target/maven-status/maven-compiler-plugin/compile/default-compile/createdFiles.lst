@@ -1,4 +1,7 @@
 vendorly\Main\baseClass.class
+utiLity\FpProductSelection.class
 utiLity\Utils.class
 utiLity\FpMethodloginPage.class
+utiLity\ExcelReadUtility.class
+vtPages\FP_ProductSelection.class
 vtPages\Pages_loginPage.class

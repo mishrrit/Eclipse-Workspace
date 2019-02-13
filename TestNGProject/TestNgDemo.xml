@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestNg Demo" parallel="tests" thread-count="5">
+	<listeners>
+		<!-- <listener class-name="Listeners.AnnotationTransformer" /> -->
+		<listener class-name="Listeners.SuiteListeners" />
+	</listeners>
+	<test name="Demo">
+		<parameter name="empname" value="Ritesh"></parameter>
+		<parameter name="empwife" value="Sipps"></parameter>
+		<parameter name="db" value="jdbc"></parameter>
+
+		<groups>
+			<define name="all">
+				<include name="bikes" />
+
+			</define>
+			<run>
+				<include name="cars" />
+				<include name="all" />
+			</run>
+		</groups>
+		<classes>
+			<class name="TestNgSamples.testDemo"></class>
+		</classes>
+	</test>
+</suite>

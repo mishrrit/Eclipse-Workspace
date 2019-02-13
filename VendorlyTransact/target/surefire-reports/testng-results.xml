@@ -2,20 +2,37 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Regression TestSuite" duration-ms="113688" started-at="2018-10-24T02:26:40Z" finished-at="2018-10-24T02:28:34Z">
+  <suite name="Regression TestSuite" duration-ms="122582" started-at="2018-11-20T15:29:16Z" finished-at="2018-11-20T15:31:19Z">
     <groups>
     </groups>
-    <test name="Navigating to VT Login Page " duration-ms="113688" started-at="2018-10-24T02:26:40Z" finished-at="2018-10-24T02:28:34Z">
+    <test name="Navigating to VT Login Page " duration-ms="122582" started-at="2018-11-20T15:29:16Z" finished-at="2018-11-20T15:31:19Z">
       <class name="vendorly.Test.vTloginPage">
-        <test-method status="PASS" signature="Setup()[pri:0, instance:vendorly.Test.vTloginPage@68837a77]" name="Setup" is-config="true" duration-ms="25661" started-at="2018-10-24T02:26:40Z" finished-at="2018-10-24T02:27:06Z">
+        <test-method status="PASS" signature="Setup()[pri:0, instance:vendorly.Test.vTloginPage@3567135c]" name="Setup" is-config="true" duration-ms="8021" started-at="2018-11-20T15:29:16Z" finished-at="2018-11-20T15:29:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method status="PASS" signature="LoginPage()[pri:0, instance:vendorly.Test.vTloginPage@68837a77]" name="LoginPage" duration-ms="87101" started-at="2018-10-24T02:27:06Z" finished-at="2018-10-24T02:28:33Z">
+        <test-method status="PASS" signature="CreateOfferWindow(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:vendorly.Test.vTloginPage@3567135c]" name="CreateOfferWindow" duration-ms="114514" started-at="2018-11-20T15:29:24Z" data-provider="Product" finished-at="2018-11-20T15:31:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Asset Management]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Redemption]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Redemption Orders]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginPage -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:vendorly.Test.vTloginPage@68837a77]" name="TearDown" is-config="true" duration-ms="886" started-at="2018-10-24T02:28:33Z" finished-at="2018-10-24T02:28:34Z">
+        </test-method> <!-- CreateOfferWindow -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:vendorly.Test.vTloginPage@3567135c]" name="TearDown" is-config="true" duration-ms="0" started-at="2018-11-20T15:31:19Z" finished-at="2018-11-20T15:31:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->

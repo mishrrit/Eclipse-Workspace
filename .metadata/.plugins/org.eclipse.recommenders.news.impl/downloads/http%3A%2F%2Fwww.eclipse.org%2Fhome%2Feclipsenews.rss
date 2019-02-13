@@ -1,1 +1,23 @@
-:home/eclipsenews.rss
+
+<!-- This page should display "ASP is working!" -->
+<!-- if ASP is available to you. -->
+
+<html>
+<head>
+<title>ASP Test Page</title>
+</head>
+<body>
+
+<h1>
+ASP is Working!
+</h1>
+Hostname: IIS114S
+<br>
+Pool URL: www.eclipse.org
+<br>
+Local address: 10.16.114.121
+<br>
+
+
+</body>
+</html>

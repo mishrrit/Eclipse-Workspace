@@ -8,12 +8,27 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">109</td><td></td><td></td></tr>
+<tr><th colspan="7">TestNg Demo</th></tr>
+<tr><td><a href="#t0">Demo</a></td><td class="num">1</td><td class="num attn">1</td><td class="num attn">1</td><td class="num">1,871</td><td>all, cars, bikes</td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">TestNg_Asserts.TestNG_Listeners2</td><td><a href="#m0">testmethod1</a></td><td rowspan="1">1535632784080</td><td rowspan="1">8</td></tr><tr class="passedeven"><td><a href="#m1">testmethod2</a></td><td rowspan="1">1535632784096</td><td rowspan="1">4</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">TestNg Demo</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Demo &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">TestNgSamples.testDemo</td><td><a href="#m0">test3</a></td><td rowspan="1">1543415912692</td><td rowspan="1">25</td></tr><tr><th colspan="4">Demo &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">TestNgSamples.testDemo</td><td><a href="#m1">test2</a></td><td rowspan="1">1543415912784</td><td rowspan="1">0</td></tr><tr><th colspan="4">Demo &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">TestNgSamples.testDemo</td><td><a href="#m2">test1</a></td><td rowspan="1">1543415911078</td><td rowspan="1">1607</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">TestNg_Asserts.TestNG_Listeners2#testmethod1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">TestNg_Asserts.TestNG_Listeners2#testmethod2</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Demo</h2><h3 id="m0">TestNgSamples.testDemo#test3</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">About to begin executing following method : testDemo.test3<br/>Completed executing following method : testDemo.test3<br/>Test Method resides in TestNgSamples.testDemo<br/>Test Status: Failed</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at TestNgSamples.testDemo.test3(testDemo.java:87)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 16 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">TestNgSamples.testDemo#test2</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Test Method resides in TestNgSamples.testDemo<br/>Test Status: Skipped<br/>Completed executing test Demo</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method testDemo.test2(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:TestNgSamples.testDemo@66a3ffec] depends on not successfully finished methods
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 9 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">TestNgSamples.testDemo#test1</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>Ritesh</td><td>Sipps</td></tr><tr><th colspan="2">Messages</th></tr><tr><td colspan="2"><div class="messages">About to begin executing following method : testDemo.test1<br/>Completed executing following method : testDemo.test1<br/>Test Method resides in TestNgSamples.testDemo<br/>Test Method had the following parameters : nullRitesh,Sipps,<br/>Test Status: Pass</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

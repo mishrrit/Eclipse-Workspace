@@ -5,8 +5,8 @@
     <classes>
       <class name="vendorly.Test.vTloginPage">
         <methods>
+          <include name="CreateOfferWindow" invocation-numbers="0"/>
           <include name="Setup"/>
-          <include name="LoginPage"/>
           <include name="TearDown"/>
         </methods>
       </class> <!-- vendorly.Test.vTloginPage -->
